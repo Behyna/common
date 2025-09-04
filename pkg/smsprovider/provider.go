@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Behyna/sms-services/smsgateway/pkg/httpclient"
+	"github.com/Behyna/common/pkg/httpclient"
 )
 
 type Provider interface {
