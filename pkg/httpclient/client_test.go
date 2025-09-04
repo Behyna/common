@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Behyna/sms-services/smsgateway/pkg/httpclient"
+	"github.com/Behyna/common/pkg/httpclient"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
