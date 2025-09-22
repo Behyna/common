@@ -3,7 +3,6 @@ module github.com/Behyna/common
 go 1.24.4
 
 require (
-	github.com/Behyna/sms-services/smsgateway v0.0.0-20250904162747-52ca8964068b
 	github.com/rabbitmq/amqp091-go v1.10.0
 	github.com/stretchr/testify v1.11.1
 	go.uber.org/zap v1.27.0
