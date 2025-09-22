@@ -13,7 +13,6 @@ type HTTPClient interface {
 	Get(ctx context.Context, url string, headers map[string]string) (*http.Response, error)
 	Post(ctx context.Context, url string, body io.Reader, headers map[string]string) (*http.Response, error)
 	Do(req *http.Request) (*http.Response, error)
-	SetTimeout(time time.Duration) HTTPClient
 }
 
 type httpClient struct {
@@ -53,11 +52,5 @@ func (c *httpClient) setHeaders(req *http.Request, headers map[string]string) {
 	}
 	for key, value := range headers {
 		req.Header.Set(key, value)
-	}
-}
-
-func (c *httpClient) SetTimeout(timeout time.Duration) HTTPClient {
-	return &httpClient{
-		Client: &http.Client{Timeout: timeout},
 	}
 }
